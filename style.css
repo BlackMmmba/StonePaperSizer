@@ -1,5 +1,5 @@
 .contener{
-    padding: 5%;
+    padding: 2%;
     border: solid;
     width: 60%;
     position: absolute;
@@ -9,6 +9,11 @@
 }
 img{
     height: 5em;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+img:active{
+    transform: scale(0.80);
 }
 
 button{
@@ -20,6 +25,13 @@ button{
     left: 50%;
     border: none;
     font-size: 20px;
+    font-weight: 400;
+    box-shadow: 0 5px 10px rgb(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+button:active{
+    transform: scale(0.96);
 }
 
 .computer {
@@ -30,8 +42,12 @@ button{
 }
 h1{
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 200%;
+    transition: transform 0.2s ease;
+}
+h1:after{
+    transform: scale(0.96);
 }
 .computer{
     margin-left: 20%;

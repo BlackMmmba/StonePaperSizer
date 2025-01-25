@@ -7,7 +7,7 @@ let holdvalu = null ;
 
 img0.addEventListener("click",()=>{ holdvalu = `stone`;});
 img1.addEventListener("click",()=>{ holdvalu = `paper` });
-img2.addEventListener("click",()=>{ holdvalu = `sizer` });
+img2.addEventListener("click",()=>{ holdvalu = `scissor` });
 const button = document.getElementById("button");
 
 
@@ -21,7 +21,7 @@ const SPS = [
         name:"paper"
     },{
         id:2,
-        name:"sizer"
+        name:"scissor"
     }
 ]
 
@@ -29,7 +29,9 @@ button.addEventListener("click",()=>{
     
     const userData =holdvalu;
     if (!userData) {
-        console.log(`you have to enter three of this`);
+        comment.textContent = `you have to enter three of this 😑`;
+        comment.style.fontSize = `150%`
+        comment.style.fontFamily= ` 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;`
         return
     }
     function playGame(inform){
@@ -49,12 +51,14 @@ button.addEventListener("click",()=>{
                 console.log(`computer win`,userIndex,computerNumber);
                 cmImage.setAttribute("src",`${SPS[computerNumber].name}.png`)
                 comment.style.color = `red`
-                comment.textContent = `computer win you chose ${SPS[userIndex].name} and compute chose ${SPS[computerNumber].name}`
+                comment.style.fontSize = `150%`
+                comment.textContent = `computer win you chose ${SPS[userIndex].name} and compute chose ${SPS[computerNumber].name} 🥱 `
             }else{
                 console.log(`user win`,userIndex,computerNumber );
                 cmImage.setAttribute("src",`${SPS[computerNumber].name}.png`)
                 comment.style.color= `green`
-                comment.textContent = `user win you chose ${SPS[userIndex].name} and compute chose ${SPS[computerNumber].name}`
+                comment.style.fontSize = `150%`
+                comment.textContent = `user win you chose ${SPS[userIndex].name} and compute chose ${SPS[computerNumber].name} 😎`
                 
             }
             
@@ -66,14 +70,17 @@ button.addEventListener("click",()=>{
                 console.log(`user win`,userIndex,computerNumber );
                 cmImage.setAttribute("src",`${SPS[computerNumber].name}.png`)
                 comment.style.color = `green`
-                comment.textContent = `user win you chose ${SPS[userIndex].name} and compute chose ${SPS[computerNumber].name}`
+                comment.style.fontSize = `150%`
+                comment.textContent = `user win you chose ${SPS[userIndex].name} and compute chose ${SPS[computerNumber].name} 😎 `
                 
             }else{
                 console.log(`computer win`,userIndex,computerNumber);
                 console.log(`computer win`,userIndex,computerNumber);
                 cmImage.setAttribute("src",`${SPS[computerNumber].name}.png`)
                 comment.style.color = `red`
-                comment.textContent = `computer win  you chose ${SPS[userIndex].name} and compute chose ${SPS[computerNumber].name}`
+                comment.style.fontSize = `150%`
+                comment.textContent = `computer win  you chose ${SPS[userIndex].name} and compute chose ${SPS[computerNumber].name}
+                🥱`
                 
             }
             
@@ -83,7 +90,8 @@ button.addEventListener("click",()=>{
             console.log(`computer win`,userIndex,computerNumber);
             cmImage.setAttribute("src",`${SPS[computerNumber].name}.png`)
             comment.style.color = `blue`
-            comment.textContent = `draw you chose ${SPS[userIndex].name} and compute chose ${SPS[computerNumber].name}`
+            comment.style.fontSize = `150%`
+            comment.textContent = `draw you chose ${SPS[userIndex].name} and compute chose ${SPS[computerNumber].name } 😅`
             
         }
      
